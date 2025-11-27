@@ -1,18 +1,18 @@
-// screens/Details.tsx
+// screens/List.tsx
 import * as React from "react";
 import { Button, StyleSheet, Switch, Text, View } from "react-native";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import type { RootStackParamList } from "../App";
 
-type Props = NativeStackScreenProps<RootStackParamList, "Details">;
+type Props = NativeStackScreenProps<RootStackParamList, "List">;
 
-export default function DetailsScreen({ navigation }: Props) {
+export default function ListScreen({ navigation }: Props) {
   const [enabled, setEnabled] = React.useState(false);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Details</Text>
-      <Text>This is where you show your Details content.</Text>
+      <Text style={styles.title}>List</Text>
+      <Text>This is where you show your List content.</Text>
 
       <View style={{ height: 20 }} />
 

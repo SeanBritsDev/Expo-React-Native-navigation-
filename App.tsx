@@ -3,10 +3,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
 
-import DetailsScreen from "./screens/DetailsScreen";
 import MainScreen from "./screens/MainScreen";
+import DetailsScreen from "./screens/DetailsScreen";
+import CalendarScreen from "./screens/CalendarScreen";
 import MapScreen from "./screens/MapScreen";
-import SettingsScreen from "./screens/SettingsScreen";
+import ListScreen from "./screens/ListScreen";
 
 export type RootStackParamList = {
   Main: undefined;
@@ -28,8 +29,9 @@ export default function App() {
       >
         <Stack.Screen name="Main" component={MainScreen} />
         <Stack.Screen name="Details" component={DetailsScreen} />
-        <Stack.Screen name="Settings" component={SettingsScreen} />
+        <Stack.Screen name="Calendar" component={CalendarScreen} />
         <Stack.Screen name="Map" component={MapScreen} />
+        <Stack.Screen name="List" component={ListScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

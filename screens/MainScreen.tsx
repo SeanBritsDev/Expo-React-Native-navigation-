@@ -15,11 +15,17 @@ export default function MainScreen({ navigation }: Props) {
       />
       <View style={styles.spacer} />
       <Button
-        title="Go to Settings"
-        onPress={() => navigation.navigate("Settings")}
+        title="Go to List"
+        onPress={() => navigation.navigate("List" as any)}
       />
       <View style={styles.spacer} />
       <Button title="Go to Map" onPress={() => navigation.navigate("Map")} />
+
+      <View style={styles.spacer} />
+      <Button
+        title="Go to Calendar"
+        onPress={() => navigation.navigate("Calendar" as any)}
+      />
     </View>
   );
 }

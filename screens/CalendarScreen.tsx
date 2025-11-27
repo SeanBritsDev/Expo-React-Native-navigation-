@@ -1,18 +1,18 @@
-// screens/Details.tsx
+// screens/CalendarScreen.tsx
 import * as React from "react";
 import { Button, StyleSheet, Switch, Text, View } from "react-native";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import type { RootStackParamList } from "../App";
 
-type Props = NativeStackScreenProps<RootStackParamList, "Details">;
+type Props = NativeStackScreenProps<RootStackParamList, "Calendar">;
 
-export default function DetailsScreen({ navigation }: Props) {
+export default function CalendarScreen({ navigation }: Props) {
   const [enabled, setEnabled] = React.useState(false);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Details</Text>
-      <Text>This is where you show your Details content.</Text>
+      <Text style={styles.title}>Calendar</Text>
+      <Text>This is where you show your Calendar content.</Text>
 
       <View style={{ height: 20 }} />
 

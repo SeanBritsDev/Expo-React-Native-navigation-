@@ -1,12 +1,25 @@
-// screens/MapScreen.tsx
+// screens/Map.tsx
 import * as React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Switch, Text, View } from "react-native";
+import type { NativeStackScreenProps } from "@react-navigation/native-stack";
+import type { RootStackParamList } from "../App";
 
-export default function MapScreen() {
+type Props = NativeStackScreenProps<RootStackParamList, "Map">;
+
+export default function MapScreen({ navigation }: Props) {
+  const [enabled, setEnabled] = React.useState(false);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Map Page</Text>
-      <Text>Later you can add a real map here (e.g. react-native-maps).</Text>
+      <Text style={styles.title}>Map</Text>
+      <Text>This is where you show your Map content.</Text>
+
+      <View style={{ height: 20 }} />
+
+      <Button
+        title="Back to Home"
+        onPress={() => navigation.navigate("Main")}
+      />
     </View>
   );
 }
@@ -14,13 +27,17 @@ export default function MapScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     padding: 24,
   },
   title: {
     fontSize: 24,
     fontWeight: "600",
     marginBottom: 16,
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 8,
   },
 });
