@@ -101,8 +101,6 @@ npx expo export --platform web
 <p></p>
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
-<div style="page-break-before:always">&nbsp;</div>
-<p></p>
 
 # Expo EAS Login
 
@@ -163,6 +161,15 @@ eas build --profile development --platform ios
 eas build --profile development --platform android
 expo start
 ```
+
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
 
 # Add a Desktop App
 
