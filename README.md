@@ -93,7 +93,8 @@ To make a Web dist folder, you can run the following command.:
 npx expo export --platform web
 ```
 
-<div style="page-break-after: always;"></div>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
 
 # Expo EAS Login
 
