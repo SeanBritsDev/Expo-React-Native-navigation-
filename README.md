@@ -201,7 +201,7 @@ Make sure that the `index.html` files are prefixed with a `.`. If not the app wi
  <script
       src="./_expo/static/js/web/index-e91cdd898aaf33b2ab467c2560f921e2.js"
     defer
-    ></script>
+></script>
 ```
 
 Make sure to run `npm install` and to also have a `main.js` as well as a `preload.js` file, even if the preload file is empty.
