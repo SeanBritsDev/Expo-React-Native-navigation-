@@ -15,18 +15,10 @@ npm install --save-dev electron
 
 npm install --save-dev cross-env
 
-npx expo export --platform web
-
-npm run electron:build
-
-npm run electron-build-web
-
 npm uninstall expo-router
 
 npm install --save-dev electron electron-builder
 npm install --save-dev electron electron-builder concurrently wait-on
-
-npx expo export --platform web
 ```
 
 You can make sure that your `package.json` looks simular to this:
@@ -87,6 +79,82 @@ You can make sure that your `package.json` looks simular to this:
 }
 ```
 
+Run the following command to use expo and run ios, android and web versions
+
+```sh
+npx expo start
+```
+
+> you can then use `w` or `a` for example to run a `web` or `android` app. Remember to have your device pluged in, for mobile, or use a Virtual Device.
+
+To make a Web dist folder, you can run the following command.:
+
+```sh
+npx expo export --platform web
+```
+
+<div style="page-break-after: always;"></div>
+
+# Expo EAS Login
+
+To generate files online using Expo, use the following commands:
+
+```sh
+npm install -g eas-cli
+npx expo login
+eas login
+eas build:configure
+```
+
+The `eas.json` file should look something like this:
+
+```json
+{
+  "build": {
+    "release": {
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": false
+      }
+    }
+  }
+}
+```
+
+You can then use this command to create the app
+
+```sh
+eas build -p android --profile release
+eas build -p ios --profile release
+```
+
+You can also use this to create a development build
+
+```sh
+npx expo install expo-dev-client
+```
+
+You can use this `app.json` update
+
+```json
+{
+  "expo": {
+    "name": "MyApp",
+    "slug": "my-app",
+    "ios": { "bundleIdentifier": "com.myapp" },
+    "android": { "package": "com.myapp" }
+  }
+}
+```
+
+```sh
+eas build --profile development --platform ios
+eas build --profile development --platform android
+expo start
+```
+
 # Add a Desktop App
 
 To run the app, add the web dist folder to a seperate folder. Then init npm like this:
@@ -109,8 +177,7 @@ Make sure that the `index.html` files are prefixed with a `.`. If not the app wi
 ></script>
 ```
 
-||
-\/
+👇
 
 ```js
 <link rel="icon" href="./favicon.ico" />
@@ -186,3 +253,11 @@ Also have this `package.json`:
   }
 }
 ```
+
+To get the `exe` file for desktop, on a windows machine, run the following command:
+
+```sh
+npm run build
+```
+
+> For MacOS, just run the command on an Apple Machine (Macbook, iMac...)
