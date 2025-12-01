@@ -95,6 +95,14 @@ npx expo export --platform web
 
 <div style="page-break-before:always">&nbsp;</div>
 <p></p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
+<div style="page-break-before:always">&nbsp;</div>
+<p></p>
 
 # Expo EAS Login
 
